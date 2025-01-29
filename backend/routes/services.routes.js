@@ -4,7 +4,7 @@ import {
   getsingleservice,
   updateService,
   deleteService
-} from "../controllers/serviceController.js";
+} from "../controllers/services.controller.js";
 import express from "express";
 const router = express.Router();
 
