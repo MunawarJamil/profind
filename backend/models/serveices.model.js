@@ -2,20 +2,44 @@ import mongoose, { Schema } from "mongoose";
 
 const serviceSchema = new Schema(
   {
-    name: {
+    personName: {
       type: String,
       required: true,
       trim: true,
     },
-    description: {
+    profession: {
       type: String,
       required: true,
     },
-    category: {
+    // category: {
+    // type: String,
+
+    // enum: ["Plumber", "Mechanic", "Barber", "Doctor", "Engineer"],
+    // },
+
+    bio: {
       type: String,
-      required: true,
-      enum: ["Plumber", "Mechanic", "Barber", "Doctor", "Engineer"], // Add more as needed
+      trim: true,
     },
+
+    serviceName: {
+      type: String,
+      trim: true,
+    },
+    serviceDiscription: {
+      type: String,
+      trim: true,
+    },
+
+    contact: {
+      type: String,
+      trim: true,
+    },
+    address: {
+      type: String,
+      trim: true,
+    },
+
     location: {
       type: {
         type: String,
@@ -26,10 +50,6 @@ const serviceSchema = new Schema(
         type: [Number],
         required: false,
       },
-    },
-    contact: {
-      type: String,
-      required: true,
     },
   },
   { timestamps: true }

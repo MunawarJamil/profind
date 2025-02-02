@@ -22,14 +22,7 @@ const userSchema = new Schema({
         enum: ['user', 'admin'],
         default: 'user',
       },
-      mobile: {
-        type: String,
-        trim: true,
-    },
-    address: {
-        type: String,
-        trim: true,
-    },
+     
 
         // avatar: {
         //     type: String,

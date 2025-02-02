@@ -2,13 +2,25 @@ import Services from "../models/serveices.model.js";
 
 export const addServices = async (req, res) => {
   try {
-    const { name, description, category, location, contact } = req.body;
-    const newService = await Services.create({
-      name,
-      description,
-      category,
-      location,
+    const {
+      personName,
+      profession,
+      bio,
+      serviceName,
+      serviceDiscription,
       contact,
+      address,
+      location,
+    } = req.body;
+    const newService = await Services.create({
+      personName,
+      profession,
+      bio,
+      serviceName,
+      serviceDiscription,
+      contact,
+      address,
+      location,
     });
     res.status(201).json({ success: true, data: newService });
   } catch (error) {
